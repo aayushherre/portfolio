@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .login-box {
+            background: #020617;
+            padding: 30px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(34,211,238,0.4);
+            text-align: center;
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            background: #0f172a;
+            color: white;
+        }
+
+        input:focus {
+            outline: 2px solid #22d3ee;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #22d3ee;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #06b6d4;
+        }
+
+        .extra {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .extra a {
+            color: #22d3ee;
+            text-decoration: none;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h2>Login</h2>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+
+    <div class="extra">
+        <p><a href="#">Forgot Password?</a></p>
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+
+</div>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+    let message = document.getElementById("message");
+
+    if (user === "" || pass === "") {
+        message.innerText = "Please fill all fields";
+        message.style.color = "red";
+    }
+    else if (user === "admin" && pass === "1234") {
+        message.innerText = "Login successful!";
+        message.style.color = "lightgreen";
+    }
+    else {
+        message.innerText = "Invalid username or password";
+        message.style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html>
