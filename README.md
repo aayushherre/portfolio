@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is my personal portfolio website created using HTML, CSS, and JavaScript.
+This is my personal portfolio website created using HTML and CSS.
 
 ## Features
 - Navigation menu
