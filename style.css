@@ -1,8 +1,13 @@
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: #0f172a;
-  color: #e5e7eb;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0b1120;
+  color: #e2e8f0;
 }
 
 /* NAVBAR */
@@ -11,11 +16,12 @@ body {
   justify-content: space-between;
   padding: 20px 60px;
   background: #020617;
+  border-bottom: 1px solid #1e293b;
 }
 
 .navbar ul {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   list-style: none;
 }
 
@@ -25,53 +31,66 @@ body {
 }
 
 .navbar a:hover {
-  color: white;
+  color: #ffffff;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 20px;
+  text-align: center;
 }
 
 /* HOME */
-.home {
-  text-align: center;
-  padding: 100px;
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
-.profile-img {
-  width: 130px;
-  border-radius: 50%;
+.tagline {
+  color: #94a3b8;
+}
+
+.desc {
+  max-width: 500px;
+  margin: auto;
+  color: #94a3b8;
 }
 
 /* CARD */
 .card {
   background: #020617;
-  padding: 30px;
-  margin: 20px auto;
-  width: 80%;
+  border: 1px solid #1e293b;
+  padding: 40px;
   max-width: 600px;
-  border-radius: 10px;
+  margin: auto;
+  border-radius: 12px;
 }
 
 /* PROJECTS */
 .projects {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 80px;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .project-card {
-  width: 250px;
-  background: #020617;
+  width: 260px;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  transition: 0.3s;
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  transition: 0.2s;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
 }
 
 .project-card img {
   width: 100%;
+  border-radius: 8px;
 }
 
 /* GALLERY */
@@ -85,7 +104,7 @@ body {
 .gallery img {
   width: 100%;
   border-radius: 10px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .gallery img:hover {
@@ -94,10 +113,12 @@ body {
 
 /* BUTTON */
 a, button {
-  background: #1e293b;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #e2e8f0;
   text-decoration: none;
-  border: none;
+  background: transparent;
 }
